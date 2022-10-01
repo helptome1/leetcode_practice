@@ -12,7 +12,6 @@
  */
 var strStr = function (haystack, needle) {
   const match = haystack.match(needle)
-  console.log(match && match.index)
   return match ? match.index : -1
 }
 
