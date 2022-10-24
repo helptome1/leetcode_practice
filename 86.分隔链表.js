@@ -34,6 +34,7 @@ var partition = function(head, x) {
       p2.next = head
       p2 = p2.next
     }
+    // 断开原链表中的每个节点的 next 指针
     head.next = null
     head = temp
   }
