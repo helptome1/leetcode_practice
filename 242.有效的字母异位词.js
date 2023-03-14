@@ -38,15 +38,21 @@ var isAnagram = function (s, t) {
   //   }
   // })
   // return isEqual
+  let hash = s.split('')
+  for (let i = 0; i < t.length; i++) {
+    let index = hash.indexOf(t[i])
+    console.log('index', index)
+    if (index >= 0) {
+      hash.splice(index, 1)
+    } else {
+      return false
+    }
+  }
+  console.log(hash)
 
-  let sArr = s.split('')
-  let tArr = t.split('')
-  let isEqual = true
-  if (sArr.length != tArr.length) return false
-
-
+  if (hash.length === 0) return true
 }
 
-const isTrue = isAnagram('anagrmm', 'nagaram')
+const isTrue = isAnagram('ab', 'a')
 console.log(isTrue)
 // @lc code=end
